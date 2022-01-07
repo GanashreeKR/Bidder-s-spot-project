@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<title>bidders.com</title>
+<link rel = "stylesheet" href="edits.css">
+<h1><marquee style="color: rgb(86, 24, 145);">BIDDER'S SPOT.com</marquee></h1>
+</head>
+
+
+<body bgcolor= "#F9DC90">
+<h2 align="center" style="color: cyan; width: auto;"><u><i>Paintings for sale!!</i></u></h2>
+<div class="text"  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><marquee>
+    This is the page where we are going to sell the antique stuffs.<br>Today we are selling paintings which belongs to Roman cultures.<br>This is being the most trustable website for selling antique stuffs.<br>we will give 100% quality assurance.<br>
+</marquee></div>
+<div class="para" style="background: rgb(241, 204, 204); margin-bottom: 10px;"><u>Instructions</u><br>1.Today we have two paintings Fayum mummy and pompeii.<br>2.By clicking the bid below the paintings you will be able to bid.<br>3.Whoever bids the highest money will be the winner.<br>4.To check winner press the winner below the paintings.<br>5.After that make the transaction and get the painting :)</div>
+
+<img class="img_class" id="img-1" src="5c1820457439f.jpg"></a>
+<div>Painting name :Fayum mummy<br>
+    Era: Roman<br>
+    Origin country: Egypt<br>
+    Type: Etruscan Tomb Art<br>
+    Year: 93 - 112 A.D
+<button onclick="openDialog1()">BID</button>
+<button class="btn" onclick="checkWinner1()">Winner</button></div><br>
+
+<div id="container" style="white-space:nowrap">
+    <div id="image" style="display:inline;">
+        <img class="img_class" id="img-2" src="istockphoto-498126515-170667a.jpg"><br></a>
+    </div>
+<div id="texts" style="display:inline; white-space:nowrap;">
+    Painting name : Pompeii<br>
+    Era: Roman<br>
+    Origin country: Rome<br>
+    Type: Fresco Art<br>
+    Year: 123 - 134 A.D
+        <button onclick="openDialog2()">BID</button>
+        <button class="btn" onclick="checkWinner2()">Winner</button><br>
+</div>
+</div>
+<script>
+        var arr = [];
+        var arr2 = [];
+    function openDialog1(){
+        var amount = parseInt(prompt("Enter the amount you want to bid"));
+        if(isNaN(amount)){
+            alert("please enter a number")
+        }
+        else{
+            arr.push(amount);
+        }
+        if (amount<=0) 
+      {
+        alert("Please enter proper amount");   
+      } 
+                    
+    }  
+        
+    
+    function openDialog2(){
+        var amount1 = parseInt(prompt("Enter the amount you want to bid"));
+        if(isNaN(amount1)){
+            alert("please enter a number")
+        }
+        else{
+            arr2.push(amount1);
+            
+        }
+    }
+
+    function checkWinner1(){
+        if(arr.length != 0){
+            var max = Math.max(...arr);
+            var winner = arr.indexOf(max);
+            winner = parseInt(winner)+1;
+            alert("The winner is bidder "+ winner +". Please make the payment");
+            window.location = 'payment.html';
+        }
+        
+        
+    }
+    function checkWinner2(){
+        if(arr2.length !=0){
+            var max = Math.max(...arr2);
+            var winner = arr2.indexOf(max);
+            winner = parseInt(winner)+1;
+            alert("The winner is bidder "+ winner + ". Please make the payment");
+            window.location = 'payment.html';
+        }
+        
+        
+    }
+             
+      
+</script>
+
+</body>
+</html>

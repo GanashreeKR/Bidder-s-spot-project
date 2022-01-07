@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  
+<title>bidders.com</title>
+<link rel = "stylesheet" href="edits.css">
+</head>
+<body bgcolor="#F9DC90">
+    <div class="container">
+      <form action="">
+
+        <div class="row">
+          
+            <h1 align="center"><u>BILLING ADDRESS</u></h1>
+            <h3 align="center"><font color="red"><u>Note: Filling all the fields are Mandatory and It has to be proper</font></u></h3>
+            <label for="fname"> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="xyz" required><br><br>
+            <label for="email"> Email</label>
+            <input type="text" id="email" name="email" placeholder="xyz@example.com" required><br><br>
+            <label for="adr"> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required><br><br>
+            <label for="city"> City</label>
+            <input type="text" id="city" name="city" placeholder="New York" required><br><br></div>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="NY" required><br><br>
+            </div>
+            <div class="">
+            <label for="zip">Zip</label>
+            <input type="number" id="zip" name="zip" placeholder="560001" required><br><br>
+              </div>
+            </div>
+          </div>
+
+         
+            <h3><u>Payment</u></h3>
+            
+            
+          
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="xyz" required><br><br>
+            <label for="ccnum">Credit card number</label>
+            <input type="number" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required><br><br>
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September" required><br><br>
+
+            
+                <label for="expyear">Exp Year</label>
+                <input type="number" id="expyear" name="expyear" placeholder="2018" required><br><br>
+              </div>
+              <div class="">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="cvv" placeholder="352" required><br><br>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button id="checkout_btn" class="btn" onclick="showMsg()" required>Checkout</button>
+      </form>
+    </div>
+  </div>   
+</div>
+</div>
+</div>
+<script>
+    function showMsg(){
+      var name = document.getElementById('fname').value;
+      var mail = document.getElementById('email').value;
+      var address = document.getElementById('adr').value;
+      var cit = document.getElementById('city').value;
+      var state = document.getElementById('state').value;
+      var zip = document.getElementById('zip').value;
+      var cvv = document.getElementById('cvv').value;
+      var cname = document.getElementById('cname').value;
+      var ccnum = document.getElementById('ccnum').value;
+      var expmonth = document.getElementById('expmonth').value;
+      var expyear = document.getElementById('expyear').value;
+
+      if(name == ""){
+        alert("please fill the required field")
+      } 
+      
+      else if(mail == ""){
+        alert("please fill the required field")
+      } 
+      
+      else if(address == ""){
+        alert("please fill the required field")
+      } 
+      
+      else if(cit == ""){
+        alert("please fill the required field")
+      } 
+      
+      else if(state == ""){
+        alert("please fill the required field")
+      } 
+      
+      else if(zip == ""){
+        alert("please fill the required field")
+      } 
+      else if(cname == ""){
+        alert("please fill the required field")
+      }
+      else if(ccnum == ""){
+        alert("please fill the required field")
+      }  
+      else if(expmonth == ""){
+        alert("please fill the required field")
+      } 
+      else if(expyear == ""){
+        alert("please fill the required field")
+      } 
+      else if(cvv == ""){
+        alert("please fill the required field")
+      } 
+      else{
+        alert("Payment Successful! Your item will be delivered to you soon :)")
+      }
+    }
+    function showMsg1(){
+      alert("Fill all the fields mandatorily")
+    }
+</script>
+</body>
+</html>
